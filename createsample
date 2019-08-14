@@ -1,0 +1,2 @@
+opencv_createsamples -img objects/object0.jpg -bg bg.txt -info info/info.lst -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 45
+
