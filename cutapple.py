@@ -59,13 +59,13 @@ def parseAndGenerateImg():
 			print("bndbox", bndbox)
 
 			imgBox = imageInfo[bndbox["ymin"]:bndbox["ymax"], bndbox["xmin"]:bndbox["xmax"]]
-			if not os.path.exists('objects'):
-				os.makedirs('objects')
+			if not os.path.exists('objects/scale'):
+				os.makedirs('objects/scale')
 
 			cv2.imwrite("objects/"+filename+str(obj_index)+".jpg", imgBox)
 	
 			resized_image = cv2.resize(imgBox, (50, 50))
-			cv2.imwrite("objects/object"+str(boxCount)+".jpg", resized_image)
+			cv2.imwrite("objects/scale/object"+str(boxCount)+".jpg", resized_image)
 
 			boxCount += 1
 
